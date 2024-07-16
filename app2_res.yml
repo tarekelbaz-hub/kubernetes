@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxapp2
+  labels:
+    app: nginxapp2
+    type: frontend  
+spec:
+  containers:
+    - image: nginx
+      name: nginxapp2
+      resources:
+        limits: 
+          cpu: 800m
+          memory: 512Mi    

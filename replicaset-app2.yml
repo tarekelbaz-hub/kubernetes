@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginxapp2
+  labels:
+    app: nginxapp2
+    type: frontend
+spec:
+  selector:
+    matchLabels:
+      app: nginxapp2
+  replicas: 3
+  template:
+    metadata:
+      name: nginxapp2
+      labels:
+        app: nginxapp2
+        type: frontend
+    spec:
+      containers:
+        - image: nginx
+          name: nginxapp2
+          resources:
+            limits:
+              cpu: 1
+              memory: 512Mi

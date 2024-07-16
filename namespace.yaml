@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: default
+metadata:
+  name: xyzapp2
+  label: 
+    app: myapp
+    type: frontend 
