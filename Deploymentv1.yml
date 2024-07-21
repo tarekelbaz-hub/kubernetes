@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginxapp3
+  labels:
+    app: nginxapp3
+    type: front
+spec:
+  selector:
+    matchLabels:
+      app: nginxapp3
+  replicas: 3
+  template:
+    metadata:
+      name: nginxapp3
+      labels:
+        app: nginxapp3
+        type: front
+    spec:
+      containers:
+        - image: nginx:1.18
+          name: nginxapp3
+          resources:
+            limits:
+              cpu: 1
+              memory: 512Mi
